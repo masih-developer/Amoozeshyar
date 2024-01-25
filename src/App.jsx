@@ -1,10 +1,16 @@
-import Button from "./ui/Button";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="w-full flex items-center justify-center mt-52">
-      <Button>Hello world</Button>
-    </div>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/student" elemen={<MainLayout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 };
 
