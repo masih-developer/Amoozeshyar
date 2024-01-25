@@ -5,7 +5,7 @@
 @layer base {
 
     :root {
-        --color-primary: rgb(57, 83, 201)
+        --color-primary: 57 83 201;
     }
 
     html {
