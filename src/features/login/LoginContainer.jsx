@@ -75,7 +75,7 @@ const LoginContainer = () => {
             />
           </div>
           <div className="my-10 flex items-center justify-between">
-            <div className="basis-2/5">
+            <div className="basis-1/2">
               <TextField
                 name="captcha"
                 register={register}
@@ -91,12 +91,12 @@ const LoginContainer = () => {
             </div>
             <button
               type="button"
-              className="text-2xl text-gray-500"
+              className="text-2xl text-gray-500 px-2"
               onClick={generateRandomHandler}
             >
               <MdOutlineChangeCircle />
             </button>
-            <div className="bg-[#f0f0f0] tracking-[10px] text-gray-500 text-2xl rounded-lg h-10 flex items-center justify-center shrink-0 basis-2/5">
+            <div className="bg-[#f0f0f0] tracking-[10px] text-gray-500 text-2xl rounded-lg h-10 flex items-center justify-center basis-1/2">
               {captcha}
             </div>
           </div>
