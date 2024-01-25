@@ -6,6 +6,7 @@
 
     :root {
         --color-primary: 57 83 201;
+        --color-primary-darker: 42 56 117;
     }
 
     html {

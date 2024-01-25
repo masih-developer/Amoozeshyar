@@ -6,6 +6,7 @@ export default {
       container: { center: true },
       colors: {
         primary: "rgba(var(--color-primary) / <alpha-value>)",
+        ["primary-darker"]: "rgba(var(--color-primary-darker) / <alpha-value>)",
       },
     },
   },
