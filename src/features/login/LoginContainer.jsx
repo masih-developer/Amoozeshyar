@@ -1,21 +1,39 @@
-import { PiStudent } from "react-icons/pi";
 import { LiaUnlockAltSolid } from "react-icons/lia";
 import { MdOutlineChangeCircle } from "react-icons/md";
 import { useEffect, useState } from "react";
 import captchaGenerator from "../../utils/captchaGenerator";
+import TextField from "../../ui/TextField";
+import { PiStudent } from "react-icons/pi";
+import { useForm } from "react-hook-form";
 
 const LoginContainer = () => {
   const [captcha, setCaptcha] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: { studentCode: "", password: "", captcha: "" },
+  });
+
   const generateRandomHandler = () => {
     setCaptcha(captchaGenerator());
   };
+
+  const submitFormHandler = (data) => {
+    console.log(data);
+  };
+
   useEffect(() => {
     generateRandomHandler();
   }, []);
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
-      <form className="rounded-lg p-5 mx-3 text-center shadow-lg max-w-[400px] w-full">
+      <form
+        className="rounded-lg p-5 mx-3 text-center shadow-lg max-w-[400px] w-full"
+        onSubmit={handleSubmit(submitFormHandler)}
+      >
         <div className="w-full max-w-[300px] mx-auto">
           <div className="border-b border-b-gray-200 pb-3">
             <img src="/logo.png" alt="" className="max-w-[60px] mx-auto" />
@@ -27,29 +45,50 @@ const LoginContainer = () => {
             </p>
           </div>
           <div className="mt-10 flex flex-col gap-y-4">
-            <div className="relative">
-              <input
-                type="text"
-                className="app-input--icon"
-                placeholder="شماره دانشجویی"
-              />
-              <PiStudent className="transition-colors absolute text-gray-400 text-2xl right-2 top-0 bottom-0 m-auto input-icon" />
-            </div>
-            <div className="relative">
-              <input
-                type="password"
-                className="app-input--icon"
-                placeholder="رمز عبور"
-              />
-              <LiaUnlockAltSolid className="transition-colors absolute text-gray-400 text-2xl right-2 top-0 bottom-0 m-auto input-icon" />
-            </div>
+            <TextField
+              iconInput={true}
+              icon={
+                <PiStudent className="transition-colors absolute text-gray-400 text-2xl right-2 top-0 bottom-0 m-auto input-icon" />
+              }
+              placeholder="شماره دانشجویی"
+              name="studentCode"
+              register={register}
+              errors={errors}
+              validationSchema={{
+                required: "وارد کردن نام دانشجویی الزامیست.",
+                pattern: {
+                  value: /^[1-9]\d{13}$/g,
+                  message: "شماره دانشجویی وارده شده صحیح نمی باشد.",
+                },
+              }}
+            />
+            <TextField
+              iconInput={true}
+              icon={
+                <LiaUnlockAltSolid className="transition-colors absolute text-gray-400 text-2xl right-2 top-0 bottom-0 m-auto input-icon" />
+              }
+              placeholder="رمز عبور"
+              name="password"
+              register={register}
+              errors={errors}
+              validationSchema={{ required: "وارد کردن رمز عبور الزامیست." }}
+            />
           </div>
           <div className="my-10 flex items-center justify-between">
-            <input
-              type="text"
-              className="app-input basis-2/5"
-              placeholder="کد تصویر"
-            />
+            <div className="basis-2/5">
+              <TextField
+                name="captcha"
+                register={register}
+                validationSchema={{
+                  validate: (value) =>
+                    value.toLowerCase() === captcha.toLowerCase()
+                      ? true
+                      : "کپچا صحیح نمی باشد.",
+                }}
+                placeholder="کد تصویر"
+                errors={errors}
+              />
+            </div>
             <button
               type="button"
               className="text-2xl text-gray-500"
