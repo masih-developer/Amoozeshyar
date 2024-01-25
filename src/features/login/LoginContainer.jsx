@@ -5,9 +5,14 @@ import captchaGenerator from "../../utils/captchaGenerator";
 import TextField from "../../ui/TextField";
 import { PiStudent } from "react-icons/pi";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import Loading from "../../ui/Loading";
+import { useNavigate } from "react-router";
 
 const LoginContainer = () => {
   const [captcha, setCaptcha] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -20,8 +25,13 @@ const LoginContainer = () => {
     setCaptcha(captchaGenerator());
   };
 
-  const submitFormHandler = (data) => {
-    console.log(data);
+  const submitFormHandler = () => {
+    setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast.success("ورود موفقیت آمیز بود.");
+      navigate("/student");
+    }, 2000);
   };
 
   useEffect(() => {
@@ -100,12 +110,18 @@ const LoginContainer = () => {
               {captcha}
             </div>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-[#3953c9] h-11 text-white rounded-lg"
-          >
-            ورود دانشجو
-          </button>
+          {isSubmitting ? (
+            <div className="mt-5 text-center">
+              <Loading />
+            </div>
+          ) : (
+            <button
+              type="submit"
+              className="w-full bg-[#3953c9] h-11 text-white rounded-lg"
+            >
+              ارسال کد تایید
+            </button>
+          )}
         </div>
       </form>
     </div>
