@@ -39,4 +39,8 @@
     .app-input--icon {
         @apply app-input pr-9 [&:focus+.input-icon]:text-[#3953c9]
     }
+
+    .app-input--error {
+        @apply border-red-500 focus:border-red-500 [&:focus+.input-icon]:text-red-500 [&+.input-icon]:text-red-500
+    }
 }
