@@ -4,6 +4,10 @@
 
 @layer base {
 
+    :root {
+        --color-primary: rgb(57, 83, 201)
+    }
+
     html {
         font-family: 'Vazirmatn';
         font-weight: normal;
@@ -23,5 +27,16 @@
             transform: scale(4);
             opacity: 0;
         }
+    }
+}
+
+
+@layer components {
+    .app-input {
+        @apply w-full h-10 outline-none rounded-lg border border-gray-300 p-2 focus:border-[#3953c9] placeholder:font-light placeholder:text-sm transition-colors
+    }
+
+    .app-input--icon {
+        @apply app-input pr-9 [&:focus+.input-icon]:text-[#3953c9]
     }
 }
