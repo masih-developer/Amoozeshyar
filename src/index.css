@@ -9,6 +9,28 @@
         --color-primary-darker: 42 56 117;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+        transition: .2s;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #dcdcdc;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #a4a6a5;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #959796;
+    }
+
     html {
         font-family: 'Vazirmatn';
         font-weight: normal;
@@ -43,5 +65,17 @@
 
     .app-input--error {
         @apply border-red-500 focus:border-red-500 [&:focus+.input-icon]:text-red-500 [&+.input-icon]:text-red-500
+    }
+
+    .sidebar-acc__item {
+        @apply flex items-center gap-x-2 hover:bg-white hover:text-primary-darker transition-colors p-2 rounded-lg
+    }
+
+    .navlink__item {
+        @apply relative before:absolute before:content-[''] before:w-2.5 before:h-2.5 before:border before:border-white before:bg-primary-darker before:rounded-full before:right-[-17px] before:top-0 before:bottom-0 before:m-auto transition-colors text-sm font-light text-white/60 hover:text-white hover:before:bg-white before:transition-colors hover:font-normal
+    }
+
+    .navlink__item--active {
+        @apply before:bg-white text-white font-normal
     }
 }
