@@ -6,7 +6,7 @@ const Home = () => {
     <div className="p-5">
       <div className="grid grid-cols-12 gap-5">
         <div className="col-span-6">
-          <StatBox title="خلاصه وضعیت تحصیلی" details>
+          <StatBox title="خلاصه وضعیت تحصیلی" bulletColor="info" details>
             <div className="grid grid-cols-12 w-full gap-5">
               <div className="bg-gray-100 rounded-lg p-5 col-span-4">
                 <div className="flex items-center justify-center flex-col gap-y-1">
