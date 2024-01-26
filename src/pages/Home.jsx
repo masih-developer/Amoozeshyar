@@ -63,7 +63,22 @@ const Home = () => {
           </StatBox>
         </div>
         <div className="col-span-2">
-          <StatBox title="اطلاعات" bulletColor="neutral"></StatBox>
+          <StatBox title="اطلاعات" bulletColor="neutral">
+            <ul className="flex flex-col gap-y-5">
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center gap-x-2">
+                <h4 className="font-medium text-gray-500">استان:</h4>
+                <span className="font-medium">البرز</span>
+              </li>
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center gap-x-1">
+                <h4 className="font-medium text-gray-500">واحد:</h4>
+                <span className="font-medium">کرج</span>
+              </li>
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center gap-x-2">
+                <h4 className="font-medium text-gray-500">نیمسال:</h4>
+                <span className="font-medium">1402</span>
+              </li>
+            </ul>
+          </StatBox>
         </div>
         <div className="col-span-9">
           <StatBox
