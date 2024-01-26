@@ -34,11 +34,33 @@ const Home = () => {
           </StatBox>
         </div>
         <div className="col-span-4">
-          <StatBox
-            title="خلاصه وضعیت مالی"
-            bulletColor="success"
-            details
-          ></StatBox>
+          <StatBox title="خلاصه وضعیت مالی" bulletColor="success" details>
+            <ul className="flex flex-col gap-y-5">
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center justify-between">
+                <h4 className="font-medium text-gray-500">
+                  کل مبلغ پرداختی ترم جاری:
+                </h4>
+                <span className="flex items-center gap-x-1">
+                  <span className="text-sm">تومان</span>
+                  <span className="font-medium">1/890/000</span>
+                </span>
+              </li>
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center justify-between">
+                <h4 className="font-medium text-gray-500">مبلغ پرداخت شده:</h4>
+                <span className="flex items-center gap-x-1">
+                  <span className="text-sm">تومان</span>
+                  <span className="font-medium">770/000</span>
+                </span>
+              </li>
+              <li className="rounded-lg bg-gray-100 p-3 flex items-center justify-between">
+                <h4 className="font-medium text-gray-500">مبلغ بدهی:</h4>
+                <span className="flex items-center gap-x-1">
+                  <span className="text-sm">تومان</span>
+                  <span className="font-medium">1/120/000</span>
+                </span>
+              </li>
+            </ul>
+          </StatBox>
         </div>
         <div className="col-span-2">
           <StatBox title="اطلاعات" bulletColor="neutral"></StatBox>
