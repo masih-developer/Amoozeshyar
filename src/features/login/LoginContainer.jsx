@@ -46,7 +46,11 @@ const LoginContainer = () => {
       >
         <div className="w-full max-w-[300px] mx-auto">
           <div className="border-b border-b-gray-200 pb-3">
-            <img src="/logo.png" alt="" className="max-w-[60px] mx-auto" />
+            <img
+              src="/images/logo.png"
+              alt=""
+              className="max-w-[60px] mx-auto"
+            />
             <h3 className="text-xl my-2 font-medium">
               سامانه دانشجویی آموزشیار
             </h3>

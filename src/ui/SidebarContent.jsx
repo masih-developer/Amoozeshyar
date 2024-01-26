@@ -12,7 +12,7 @@ const SidebarContent = () => {
   return (
     <>
       <div className="flex items-center justify-center gap-x-3 mb-5">
-        <img src="/logo.png" alt="" className="max-w-[50px]" />
+        <img src="/images/logo.png" alt="" className="max-w-[50px]" />
         <h3 className="text-xl">دانشگاه آزاد ایران</h3>
       </div>
       <Accordion
