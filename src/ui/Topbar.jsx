@@ -5,7 +5,7 @@ import { RxExit } from "react-icons/rx";
 
 const Topbar = () => {
   return (
-    <nav className="flex items-center justify-between shadow-md py-3 px-7">
+    <nav className="flex items-center justify-between shadow-sm py-3 px-7 bg-white">
       <div className="flex items-center gap-x-3">
         <div className="w-11 h-11 rounded-lg overflow-hidden object-contain">
           <img src="/images/user.jpg" alt="" className="" />

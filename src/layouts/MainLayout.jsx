@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div className="container">
       <div className="flex">
         <Sidebar />
-        <main className="w-[calc(100%-250px)] mr-auto">
+        <main className="w-[calc(100%-250px)] mr-auto bg-gray-100">
           <Topbar />
           <Outlet />
         </main>
