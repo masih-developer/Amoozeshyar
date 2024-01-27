@@ -6,37 +6,37 @@ const Home = () => {
   return (
     <div className="p-5">
       <div className="grid grid-cols-12 gap-5">
-        <div className="col-span-6">
+        <div className="col-span-12 md:col-span-6 xl:col-span-6">
           <StatBox title="خلاصه وضعیت تحصیلی" bulletColor="info" details>
             <div className="grid grid-cols-12 w-full gap-5">
-              <div className="bg-gray-100 rounded-lg p-5 col-span-4">
+              <div className="col-span-12 sm:col-span-6 xl:col-span-4 bg-gray-100 rounded-lg p-5 text-center">
                 <div className="flex items-center justify-center flex-col gap-y-1">
                   <h2 className="text-5xl font-medium">98</h2>
                   <span className="">واحد برداشته شده</span>
                 </div>
               </div>
-              <div className="bg-gray-100 rounded-lg p-5 col-span-4">
+              <div className="col-span-12 sm:col-span-6 xl:col-span-4 bg-gray-100 rounded-lg p-5 text-center">
                 <div className="flex items-center justify-center flex-col gap-y-1">
                   <h2 className="text-5xl font-medium">87</h2>
                   <span className="">واحد پاس شده</span>
                 </div>
               </div>
-              <div className="bg-gray-100 rounded-lg p-5 col-span-4">
+              <div className="col-span-12 sm:col-span-12 xl:col-span-4 bg-gray-100 rounded-lg p-5 text-center">
                 <div className="flex items-center justify-center flex-col gap-y-1">
                   <h2 className="text-5xl font-medium">18.5</h2>
                   <span className="">معدل تا کنون</span>
                 </div>
               </div>
             </div>
-            <button className="flex items-center gap-x-2 mt-10 text-center mx-auto w-fit text-gray-500 border-b border-b-gray-500 pb-1">
+            <button className="flex items-center gap-x-2 mt-6 text-center mx-auto w-fit text-gray-500 border-b border-b-gray-500 pb-1">
               <BiPrinter className="text-lg" />
               چاپ کارنامه کلی دانشجو
             </button>
           </StatBox>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-12 md:col-span-6 xl:col-span-4">
           <StatBox title="خلاصه وضعیت مالی" bulletColor="success" details>
-            <ul className="flex flex-col gap-y-5">
+            <ul className="flex flex-col gap-y-3">
               <li className="rounded-lg bg-gray-100 p-3 flex items-center justify-between">
                 <h4 className="font-medium text-gray-500">
                   کل مبلغ پرداختی ترم جاری:
@@ -63,9 +63,9 @@ const Home = () => {
             </ul>
           </StatBox>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-12 xl:col-span-2">
           <StatBox title="اطلاعات" bulletColor="neutral">
-            <ul className="flex flex-col gap-y-5">
+            <ul className="flex flex-col gap-y-3">
               <li className="rounded-lg bg-gray-100 p-3 flex items-center gap-x-2">
                 <h4 className="font-medium text-gray-500">استان:</h4>
                 <span className="font-medium">البرز</span>
@@ -81,7 +81,7 @@ const Home = () => {
             </ul>
           </StatBox>
         </div>
-        <div className="col-span-8">
+        <div className="col-span-12 xl:col-span-8">
           <StatBox title="برنامه کلاسی ترم جاری" bulletColor="warning" details>
             <div className="overflow-x-auto">
               <Table className="app-table">
@@ -192,9 +192,9 @@ const Home = () => {
             </div>
           </StatBox>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-12 xl:col-span-4">
           <StatBox title="اطلاعیه های مهم" bulletColor="error">
-            <div className="border border-gray-100 rounded-lg overflow-y-auto">
+            <div className="border border-gray-100 rounded-lg">
               <p className="odd:bg-gray-50 even:bg-white p-2 leading-7">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
