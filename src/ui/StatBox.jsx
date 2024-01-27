@@ -9,7 +9,7 @@ const StatBox = ({
   detailsLink = "",
 }) => {
   return (
-    <div className="p-5 rounded-lg shadow-md bg-white">
+    <div className="p-5 rounded-lg shadow-md bg-white h-full overflow-auto">
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-x-2">
           <Bullet bulletColor={bulletColor} />

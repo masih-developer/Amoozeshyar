@@ -5,8 +5,8 @@ import Table from "../ui/Table";
 const Home = () => {
   return (
     <div className="p-5">
-      <div className="grid grid-cols-12 gap-5">
-        <div className="col-span-12 md:col-span-6 xl:col-span-6">
+      <div className="xl:h-[calc(100vh-112px)] overflow-hidden grid grid-cols-12 gap-5 xl:grid-rows-12">
+        <div className="col-span-12 md:col-span-6 xl:col-span-6 xl:row-span-5 overflow-y-auto">
           <StatBox title="خلاصه وضعیت تحصیلی" bulletColor="info" details>
             <div className="grid grid-cols-12 w-full gap-5">
               <div className="col-span-12 sm:col-span-6 xl:col-span-4 bg-gray-100 rounded-lg p-5 text-center">
@@ -34,7 +34,7 @@ const Home = () => {
             </button>
           </StatBox>
         </div>
-        <div className="col-span-12 md:col-span-6 xl:col-span-4">
+        <div className="col-span-12 md:col-span-6 xl:col-span-4 xl:row-span-5 overflow-y-auto">
           <StatBox title="خلاصه وضعیت مالی" bulletColor="success" details>
             <ul className="flex flex-col gap-y-3">
               <li className="rounded-lg bg-gray-100 p-3 flex items-center justify-between">
@@ -63,7 +63,7 @@ const Home = () => {
             </ul>
           </StatBox>
         </div>
-        <div className="col-span-12 xl:col-span-2">
+        <div className="col-span-12 xl:col-span-2 xl:row-span-5 overflow-y-auto">
           <StatBox title="اطلاعات" bulletColor="neutral">
             <ul className="flex flex-col gap-y-3">
               <li className="rounded-lg bg-gray-100 p-3 flex items-center gap-x-2">
@@ -81,7 +81,7 @@ const Home = () => {
             </ul>
           </StatBox>
         </div>
-        <div className="col-span-12 xl:col-span-8">
+        <div className="col-span-12 xl:col-span-8 xl:row-span-7 overflow-y-auto">
           <StatBox title="برنامه کلاسی ترم جاری" bulletColor="warning" details>
             <div className="overflow-x-auto">
               <Table className="app-table">
@@ -192,7 +192,7 @@ const Home = () => {
             </div>
           </StatBox>
         </div>
-        <div className="col-span-12 xl:col-span-4">
+        <div className="col-span-12 xl:col-span-4 xl:row-span-7 overflow-y-auto">
           <StatBox title="اطلاعیه های مهم" bulletColor="error">
             <div className="border border-gray-100 rounded-lg">
               <p className="odd:bg-gray-50 even:bg-white p-2 leading-7">
