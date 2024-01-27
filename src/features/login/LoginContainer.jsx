@@ -30,7 +30,7 @@ const LoginContainer = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       toast.success("ورود موفقیت آمیز بود.");
-      navigate("/student");
+      navigate("/");
     }, 2000);
   };
 
