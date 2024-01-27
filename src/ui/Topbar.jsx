@@ -3,8 +3,11 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { RxExit } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 const Topbar = ({ openSidebar }) => {
+  const navigate = useNavigate();
+
   return (
     <nav className="flex items-center justify-between shadow-sm py-3 px-7 bg-white">
       <div className="flex items-center gap-x-3 justify-between sm:justify-start w-full">
@@ -40,7 +43,10 @@ const Topbar = ({ openSidebar }) => {
         >
           <IoMdNotificationsOutline />
         </button>
-        <button className="text-gray-700 bg-gray-100 text-lg p-2 rounded-lg transition-colors hover:text-red-500 hover:bg-red-500/10">
+        <button
+          className="text-gray-700 bg-gray-100 text-lg p-2 rounded-lg transition-colors hover:text-red-500 hover:bg-red-500/10"
+          onClick={() => navigate("/login")}
+        >
           <RxExit />
         </button>
       </div>
