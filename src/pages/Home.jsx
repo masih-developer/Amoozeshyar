@@ -1,5 +1,6 @@
 import StatBox from "../ui/StatBox";
 import { BiPrinter } from "react-icons/bi";
+import Table from "../ui/Table";
 
 const Home = () => {
   return (
@@ -80,14 +81,118 @@ const Home = () => {
             </ul>
           </StatBox>
         </div>
-        <div className="col-span-9">
-          <StatBox
-            title="برنامه کلاسی ترم جاری"
-            bulletColor="warning"
-            details
-          ></StatBox>
+        <div className="col-span-8">
+          <StatBox title="برنامه کلاسی ترم جاری" bulletColor="warning" details>
+            <div className="overflow-x-auto">
+              <Table className="app-table">
+                <Table.Header>
+                  <Table.Row>
+                    <th>ردیف</th>
+                    <th>نام درس</th>
+                    <th>نام استاد</th>
+                    <th>زمان کلاس</th>
+                    <th>تاریخ امتحان</th>
+                    <th>کلاس</th>
+                  </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                  <Table.Row>
+                    <td>1</td>
+                    <td>برنامه سازی پیشرفته</td>
+                    <td>علیرضا نیکیان</td>
+                    <td>سه شنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>2</td>
+                    <td>ساختمان داده</td>
+                    <td>حسین هادیپور</td>
+                    <td>سه شنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>3</td>
+                    <td>دانش خانواده و جمعیت</td>
+                    <td>یوسف نجفی</td>
+                    <td>دوشنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>3</td>
+                    <td>دانش خانواده و جمعیت</td>
+                    <td>یوسف نجفی</td>
+                    <td>دوشنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>4</td>
+                    <td>دانش خانواده و جمعیت</td>
+                    <td>یوسف نجفی</td>
+                    <td>دوشنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>5</td>
+                    <td>دانش خانواده و جمعیت</td>
+                    <td>یوسف نجفی</td>
+                    <td>دوشنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                  <Table.Row>
+                    <td>6</td>
+                    <td>دانش خانواده و جمعیت</td>
+                    <td>یوسف نجفی</td>
+                    <td>دوشنبه 8:15 الی 10:30</td>
+                    <td>
+                      <div className="flex flex-col justify-center items-center gap-y-1">
+                        <span className="">1402/06/12</span>
+                        <span className="">ساعت 14:00</span>
+                      </div>
+                    </td>
+                    <td>302 کامپیوتر</td>
+                  </Table.Row>
+                </Table.Body>
+              </Table>
+            </div>
+          </StatBox>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-4">
           <StatBox title="اطلاعیه های مهم" bulletColor="error"></StatBox>
         </div>
       </div>

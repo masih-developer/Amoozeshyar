@@ -12,6 +12,7 @@
     /* width */
     ::-webkit-scrollbar {
         width: 7px;
+        height: 7px;
         transition: .2s;
     }
 
@@ -78,4 +79,28 @@
     .navlink__item--active {
         @apply before:bg-white text-white font-normal
     }
+
+    .app-table {
+        @apply overflow-x-auto rounded-lg border border-gray-100
+    }
+
+    .app-table table {
+        @apply w-full whitespace-nowrap
+    }
+
+    .app-table table thead tr th,
+    .app-table table tbody tr td {
+        @apply p-3 text-center
+    }
+
+    .app-table table tbody tr td {
+        @apply text-sm
+    }
+
+
+    .app-table table thead tr:nth-child(odd),
+    .app-table table tbody tr:nth-child(even) {
+        @apply bg-gray-100
+    }
+
 }
