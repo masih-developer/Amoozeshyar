@@ -1,6 +1,6 @@
-import { BeatLoader } from "react-spinners";
+import { BeatLoader } from 'react-spinners';
 
-const Loading = ({ size = 15, color = "rgb(var(--color-primary))" }) => {
+const Loading = ({ size = 15, color = 'rgb(var(--color-primary))' }) => {
   return <BeatLoader size={size} color={color} />;
 };
 

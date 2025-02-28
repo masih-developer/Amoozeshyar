@@ -1,16 +1,16 @@
-import { LiaUnlockAltSolid } from "react-icons/lia";
-import { MdOutlineChangeCircle } from "react-icons/md";
-import { useEffect, useState } from "react";
-import captchaGenerator from "../../utils/captchaGenerator";
-import TextField from "../../ui/TextField";
-import { PiStudent } from "react-icons/pi";
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
-import Loading from "../../ui/Loading";
-import { useNavigate } from "react-router";
+import { LiaUnlockAltSolid } from 'react-icons/lia';
+import { MdOutlineChangeCircle } from 'react-icons/md';
+import { useEffect, useState } from 'react';
+import captchaGenerator from '../../utils/captchaGenerator';
+import TextField from '../../ui/TextField';
+import { PiStudent } from 'react-icons/pi';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import Loading from '../../ui/Loading';
+import { useNavigate } from 'react-router';
 
 const LoginContainer = () => {
-  const [captcha, setCaptcha] = useState("");
+  const [captcha, setCaptcha] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
   const {
@@ -18,7 +18,7 @@ const LoginContainer = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    defaultValues: { studentCode: "", password: "", captcha: "" },
+    defaultValues: { studentCode: '', password: '', captcha: '' },
   });
 
   const generateRandomHandler = () => {
@@ -29,8 +29,8 @@ const LoginContainer = () => {
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
-      toast.success("ورود موفقیت آمیز بود.");
-      navigate("/");
+      toast.success('ورود موفقیت آمیز بود.');
+      navigate('/');
     }, 2000);
   };
 
@@ -69,10 +69,10 @@ const LoginContainer = () => {
               register={register}
               errors={errors}
               validationSchema={{
-                required: "وارد کردن نام دانشجویی الزامیست.",
+                required: 'وارد کردن نام دانشجویی الزامیست.',
                 pattern: {
                   value: /^[1-9]\d{13}$/g,
-                  message: "شماره دانشجویی وارده شده صحیح نمی باشد.",
+                  message: 'شماره دانشجویی وارده شده صحیح نمی باشد.',
                 },
               }}
             />
@@ -85,7 +85,7 @@ const LoginContainer = () => {
               name="password"
               register={register}
               errors={errors}
-              validationSchema={{ required: "وارد کردن رمز عبور الزامیست." }}
+              validationSchema={{ required: 'وارد کردن رمز عبور الزامیست.' }}
             />
           </div>
           <div className="my-10 flex items-center justify-between">
@@ -97,7 +97,7 @@ const LoginContainer = () => {
                   validate: (value) =>
                     value.toLowerCase() === captcha.toLowerCase()
                       ? true
-                      : "کپچا صحیح نمی باشد.",
+                      : 'کپچا صحیح نمی باشد.',
                 }}
                 placeholder="کد تصویر"
                 errors={errors}

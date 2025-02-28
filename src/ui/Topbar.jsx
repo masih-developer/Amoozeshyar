@@ -1,9 +1,9 @@
-import { RiArrowDownSLine } from "react-icons/ri";
-import { IoCalendarOutline } from "react-icons/io5";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { RxExit } from "react-icons/rx";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
+import { RiArrowDownSLine } from 'react-icons/ri';
+import { IoCalendarOutline } from 'react-icons/io5';
+import { IoMdNotificationsOutline } from 'react-icons/io';
+import { RxExit } from 'react-icons/rx';
+import { HiOutlineMenuAlt3 } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 const Topbar = ({ openSidebar }) => {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ const Topbar = ({ openSidebar }) => {
         </button>
         <button
           className="text-gray-700 bg-gray-100 text-lg p-2 rounded-lg transition-colors hover:text-red-500 hover:bg-red-500/10"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate('/login')}
         >
           <RxExit />
         </button>

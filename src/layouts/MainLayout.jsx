@@ -1,19 +1,19 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "../ui/Sidebar";
-import Topbar from "../ui/Topbar";
-import { useState } from "react";
-import SidebarMobile from "../ui/SidebarMobile";
+import { Outlet } from 'react-router-dom';
+import Sidebar from '../ui/Sidebar';
+import Topbar from '../ui/Topbar';
+import { useState } from 'react';
+import SidebarMobile from '../ui/SidebarMobile';
 
 const MainLayout = () => {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
   const openSidebar = () => {
-    document.body.classList.add("overflow-hidden");
+    document.body.classList.add('overflow-hidden');
     setIsOpenSidebar(true);
   };
 
   const closeSidebar = () => {
-    document.body.classList.remove("overflow-hidden");
+    document.body.classList.remove('overflow-hidden');
     setIsOpenSidebar(false);
   };
 
@@ -30,7 +30,7 @@ const MainLayout = () => {
       </main>
       <div
         className={`fixed inset-0 z-40 bg-black/50 duration-300 ${
-          isOpenSidebar ? "visible opacity-100" : "invisible opacity-0"
+          isOpenSidebar ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
         onClick={closeSidebar}
       ></div>

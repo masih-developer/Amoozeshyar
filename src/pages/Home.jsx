@@ -1,6 +1,6 @@
-import StatBox from "../ui/StatBox";
-import { BiPrinter } from "react-icons/bi";
-import Table from "../ui/Table";
+import StatBox from '../ui/StatBox';
+import { BiPrinter } from 'react-icons/bi';
+import Table from '../ui/Table';
 
 const Home = () => {
   return (

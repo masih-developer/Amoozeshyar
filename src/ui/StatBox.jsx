@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import Bullet from "./Bullet";
+import { Link } from 'react-router-dom';
+import Bullet from './Bullet';
 
 const StatBox = ({
   children,
   title,
-  bulletColor = "",
+  bulletColor = '',
   details = false,
-  detailsLink = "",
+  detailsLink = '',
 }) => {
   return (
     <div className="p-5 rounded-lg shadow-md bg-white h-full overflow-auto">
@@ -17,7 +17,7 @@ const StatBox = ({
         </div>
         {details && (
           <Link
-            to={details ? detailsLink : ""}
+            to={details ? detailsLink : ''}
             className="text-gray-500 border-b border-b-gray-500"
           >
             جزئیات

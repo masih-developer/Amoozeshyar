@@ -1,4 +1,4 @@
-import SidebarContent from "./SidebarContent";
+import SidebarContent from './SidebarContent';
 
 const Sidebar = () => {
   return (
